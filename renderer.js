@@ -16,7 +16,7 @@ console.log( `stderr: ${command.stderr.toString()}` );
 
 
 $(document).ready(function() {
-    d_yaml = yaml.load(fs.readFileSync("./1.yaml"));
+    d_yaml = yaml.load(fs.readFileSync("./config.yaml"));
     $.each(d_yaml['current_details']['customer'], function(val, text) {
         custMap[text['usc_no']] = {
             'name': text['name'],
@@ -42,7 +42,7 @@ $(document).ready(function() {
     });
 
     $("#plusCurrentUser").click(function() {
-        d_yaml = yaml.load(fs.readFileSync("./1.yaml"));
+        d_yaml = yaml.load(fs.readFileSync("./config.yaml"));
         var usc_no = $("#usc_no").val();
         usc_no = parseInt(usc_no)
         var name = $("#name").val();
@@ -66,7 +66,7 @@ $(document).ready(function() {
             })
         }
         d_yaml['current_details']['customer'] = newlist
-        fs.writeFile("./1.yaml", yaml.dump(d_yaml), function(err) {
+        fs.writeFile("./config.yaml", yaml.dump(d_yaml), function(err) {
             if (err) {
                 return console.log(err);
             }
