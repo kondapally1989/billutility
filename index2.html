@@ -134,14 +134,14 @@ desired effect
        
 
         <div class="input-group" style="float:right;max-width:150px">
-                  <select id = "stype" class="form-control">
-                  <option>User1</option>
-                    <option>User2</option>
+                  <select id = "sel_cus" class="form-control">
+                  <option>select user</option>
+
                     </select>
         
                 
-                    <span class="input-group-btn">
-                      <button type="button" class="btn btn-info btn-flat">
+                    <span class="input-group-btn" >
+                      <button type="button" class="btn btn-info btn-flat" id="plusCurrentUser">
                         <span style="font-size:18px"><i class="fa fa-plus"></i></span>
                       </button>
                     </span>
@@ -153,29 +153,47 @@ desired effect
       <form class = "form-horizontal"  name = "current_bill_form" style="padding-top:15px">
 
         <div class = "form-group labelfont">
-      <label for = "sname" class="col-md-3 col-sm-4 hidden-sm hidden-xs col-xs-4 control-label">USN</label>
+      <label for = "usc_no" class="col-md-3 col-sm-4 hidden-sm hidden-xs col-xs-4 control-label">USC Number</label>
       <div class="col-md-6 col-sm-12 col-xs-12">
          <div class = "input-group">
-            <span class="input-group-addon">U</span>
-            <input type = "text" class = "form-control" id = "sname" placeholder = "Unique Service No.">
+            <span class="input-group-addon">U.</span>
+            <input type = "text" class = "form-control" id = "usc_no" placeholder = "USC No.">
          </div>
       </div>
    </div>
    <div class = "form-group labelfont">
-      <label for = "sname" class="col-md-3 col-sm-4 hidden-sm hidden-xs col-xs-4 control-label">Name</label>
+      <label for = "name" class="col-md-3 col-sm-4 hidden-sm hidden-xs col-xs-4 control-label">Name</label>
       <div class="col-md-6 col-sm-12 col-xs-12">
          <div class = "input-group">
-            <span class="input-group-addon">U</span>
-            <input type = "text" class = "form-control" id = "sname" placeholder = "Unique Service No.">
+            <span class="input-group-addon">N</span>
+            <input type = "text" class = "form-control" id = "name" placeholder = "Name">
          </div>
       </div>
    </div>
    <div class = "form-group labelfont">
-      <label for = "sname" class="col-md-3 col-sm-4 hidden-sm hidden-xs col-xs-4 control-label">Email ID</label>
+      <label for = "mail_id" class="col-md-3 col-sm-4 hidden-sm hidden-xs col-xs-4 control-label">Email ID</label>
       <div class="col-md-6 col-sm-12 col-xs-12">
          <div class = "input-group">
-            <span class="input-group-addon">U</span>
-            <input type = "text" class = "form-control" id = "sname" placeholder = "Unique Service No.">
+            <span class="input-group-addon">E</span>
+            <input type = "text" class = "form-control" id = "mail_id" placeholder = "Email ID">
+         </div>
+      </div>
+   </div>
+          
+    <div class = "form-group labelfont">
+      <label for = "mail_id" class="col-md-3 col-sm-4 hidden-sm hidden-xs col-xs-4 control-label">credit card</label>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+         <div class = "input-group">
+            <span class="input-group-addon">C</span>
+            <div class = "labelfont" style="margin-top: 10px">
+             <select id = "sel_cre2" class="form-control">
+                  <option>select credit</option>
+
+                    </select>
+        
+                
+                    
+         </div>
          </div>
       </div>
    </div>
@@ -183,7 +201,7 @@ desired effect
     <div class = "form-group labelfont" >
       <div style="width: 100%;text-align: center"> 
          <button class="stylefunc btn btn-default" 
-          type="submit" ng-click = "submit_sdetails=true" ng-disabled=disabled>Pay Bill</button>
+          type="submit" ng-click = "submit_sdetails=true" ng-disabled=disabled id="pay-bill">Pay Bill</button>
       </div>
    </div>
 
@@ -196,7 +214,7 @@ desired effect
       <h1>
         Credit Card
       </h1>
-
+        
       <div class="col-md-offset-4 col-md-4 col-sm-8 col-lg-offset-4 col-lg-4 ng-scope">
       <div class="panel-body" style="height: auto">
 
@@ -207,7 +225,7 @@ desired effect
             <div class = "input-group">
                <span class="input-group-addon"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
                <input  style = "width: 100%" type = "text" class = "form-control payment_input"  placeholder = "Enter Card Number" 
-               name = "ccinfo"
+               id = "cnum"
                required>
             </div>
          </div>
@@ -215,15 +233,47 @@ desired effect
             <label><span>Expiry Date</span></label>
             <label class="pull-right"><span>cvc</span></label>
             <div class="form-inline row" style="margin:0">
-               <input  type="text"  class = "form-control input-normal payment_input col-sm-3 col-md-2" name = "ccinfo" size="2" placeholder="mm" style="width:auto;display: -webkit-inline-box;">
+               <input  type="text"  class = "form-control input-normal payment_input col-sm-3 col-md-2" id = "cm" size="2" placeholder="mm" style="width:auto;display: -webkit-inline-box;">
                <span class="col-sm-1 col-md-1" style="padding: 3px 10px 0 7px; font-size:16px"><b>/</b></span>
-               <input    type="text" name = "ccinfo" class = "form-control input-normal payment_input col-sm-3 col-md-2" size="2" placeholder="yy" style="width:auto;display: -webkit-inline-box;">
-               <input  type="text" name = "ccinfo" class = "form-control input-normal pull-right col-sm-3 col-md-2  payment_input" size="3" placeholder="cvc" style="width:auto;display: -webkit-inline-box;">
+               <input    type="text" id = "cy" class = "form-control input-normal payment_input col-sm-3 col-md-2" size="2" placeholder="yy" style="width:auto;display: -webkit-inline-box;">
+               <input  type="text" id = "cvv" class = "form-control input-normal pull-right col-sm-3 col-md-2  payment_input" size="3" placeholder="cvc" style="width:auto;display: -webkit-inline-box;">
+            </div>
+         </div>
+        <div class = "form-group labelfont" style="margin-left: 0;margin-right:0">
+            <label><span>name</span></label>
+            <div class = "input-group">
+               <span class="input-group-addon"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+               <input  style = "width: 100%" type = "text" class = "form-control payment_input"  placeholder = "Enter Card Name" 
+               id = "cname"
+               required>
+            </div>
+         </div>
+           <div class = "form-group labelfont" style="margin-left: 0;margin-right:0">
+            <label><span>name</span></label>
+            <div class = "input-group">
+               <span class="input-group-addon"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+               
+                <select id = "ctype" class="form-control">
+                  <option>select card type</option>
+                    <option>debit</option>
+                    <option>credit</option>
+                    </select>
             </div>
          </div>
          <div class = "labelfont" style="margin-top: 10px">
-            <button  ng-disabled="disable_submit" type = "submit" class= "btn btn-success btn-block" >Submit Card</button>
+             <select id = "sel_cre" class="form-control">
+                  <option>select credit</option>
+
+                    </select>
+        
+                
+                    <span class="input-group-btn" >
+                      <button type="button" class="btn btn-info btn-flat" id="plusCreditCard">
+                        <span style="font-size:18px"><i class="fa fa-plus"></i></span>
+                      </button>
+                    </span>
          </div>
+          
          <!-- <div class = "labelfont" style="margin-top: 10px">
             <a ng-click = "confirm_subscription()" class= "btn btn-success btn-block">Confirm Subscription</a>
          </div> -->
@@ -268,6 +318,7 @@ desired effect
 var $ = require('jquery')
 window.jQuery=$
 require('./renderer.js')
+require('./creditcard.js')
 
 </script>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->

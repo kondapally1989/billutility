@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "admin-lte": "^2.4.2",
-    "jsdom": "^11.6.1"
+    "js-yaml": "^3.10.0",
+    "jsdom": "^11.6.1",
+    "node-yaml": "^3.1.1"
   }
 }

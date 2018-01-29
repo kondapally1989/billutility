@@ -1,0 +1,46 @@
+driver: '/home/karthik/Desktop/bill/pysel/chromedriver'
+current_details:
+  current_url: 'https://www.billdesk.com/pgidsk/pgmerc/tsspdclpgi/TSSPDCLPGIDetails.jsp'
+  customer:
+    - name: venkat RAO
+      usc_no: 1023765621
+      mail_id: knraoXX@gmail.com
+    - name: venkat
+      usc_no: 1023765671
+      mail_id: knraoXX@gmail.com
+    - usc_no: 1023765691
+      name: test
+      mail_id: knraoXX@gmail.com
+    - usc_no: 10237656888
+      name: test1
+      mail_id: knraoXX@gmail.com
+    - usc_no: 1023765678
+      name: venkat99
+      mail_id: knrao3458@gmail.com
+    - usc_no: .nan
+      name: ''
+      mail_id: ''
+water_details:
+  current_url: 'https://www.billdesk.com/pgidsk/pgmerc/tsspdclpgi/TSSPDCLPGIDetails.jsp'
+  customer:
+    - name: venkat RAO
+      can: 6135816
+credit_card_details:
+  - name: narasimha
+    type: debit
+    num: '4591567891233715'
+    exp_month: '04'
+    exp_year: '2021'
+    cvv: '302'
+  - name: karthik
+    num: '4591567891233715'
+    exp_month: '04'
+    exp_year: '2021'
+    cvv: '302'
+    type: debit
+  - num: '4591567891233717'
+    name: karthik
+    exp_month: '04'
+    exp_year: '2021'
+    cvv: '302'
+    type: debit

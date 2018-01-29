@@ -1,0 +1,9 @@
+requirements
+python 
+pip
+python selenium(pip install selenium)
+pyyaml(pip install pyyaml)
+download python selenium chrome driver https://pypi.python.org/pypi/chromedriver_installer
+update chromedriver address in config.yaml
+npm install
+npm start
