@@ -42,10 +42,12 @@ import time
 import sys
 
 
-diction = yaml.load(open('config.yaml'))
+diction = yaml.load(open('./config.yaml'))
   
 diction['current_details']['customer'][0]['usc_no'] = sys.argv[1]
 diction['current_details']['customer'][0]['mail_id'] = sys.argv[2]
+diction['credit_card_details'] = {}
+diction['credit_card_details']['user'] = {}
 diction['credit_card_details']['user']['num'] =  sys.argv[3]
 diction['credit_card_details']['user']['exp_month'] = sys.argv[4]
 diction['credit_card_details']['user']['exp_year'] = sys.argv[5]
