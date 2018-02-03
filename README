@@ -4,6 +4,11 @@ pip
 python selenium(pip install selenium)
 pyyaml(pip install pyyaml)
 download python selenium chrome driver https://pypi.python.org/pypi/chromedriver_installer
+
+LATEST=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+wget http://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip 
+
 update chromedriver address in config.yaml
 npm install
 npm start

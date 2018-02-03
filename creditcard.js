@@ -18,7 +18,7 @@ window.creMap = creMap;
 
 
 $(document).ready(function () {
-    d_yaml = yaml.load(fs.readFileSync("./1.yaml"));
+    d_yaml = yaml.load(fs.readFileSync("./config.yaml"));
     $.each(d_yaml['credit_card_details'], function(val, text) {
         creMap[text['num']] = {
             'name': text['name'],
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
 
     $("#plusCreditCard").click(function() {
-        d_yaml = yaml.load(fs.readFileSync("./1.yaml"));
+        d_yaml = yaml.load(fs.readFileSync("./config.yaml"));
         var cnum = $("#cnum").val();
         var name = $("#cname").val();
         cm = $("#cm").val();
@@ -75,7 +75,7 @@ $(document).ready(function () {
             });
         }
         d_yaml['credit_card_details'] = newlist
-        fs.writeFile("./1.yaml", yaml.dump(d_yaml), function(err) {
+        fs.writeFile("./config.yaml", yaml.dump(d_yaml), function(err) {
             if (err) {
                 return console.log(err);
             }
