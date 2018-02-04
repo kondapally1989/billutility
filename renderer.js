@@ -16,6 +16,10 @@ console.log( `stderr: ${command.stderr.toString()}` );
 
 
 $(document).ready(function() {
+
+   // /var sidebar = $(".sidebar-menu").children("li:last").remove();
+   
+
     d_yaml = yaml.load(fs.readFileSync("./config.yaml"));
     $.each(d_yaml['current_details']['customer'], function(val, text) {
         custMap[text['usc_no']] = {
