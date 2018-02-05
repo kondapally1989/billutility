@@ -40,6 +40,9 @@
     margin: auto;
     border: 1px solid #aaa;
     }
+    a{
+      cursor: pointer;
+    }
   </style>
 </head>
 <!--
@@ -115,11 +118,12 @@ desired effect
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
-      <ul class="sidebar-menu tree" data-widget="tree">
-        
+      <div>
+      <ul class="sidebar-menu">
         <li class="active"><a id="a_current_bill"><i class="fa fa-link"></i> <span>Current Bill</span></a></li>
-         <li ><a id="a_credit_card"><i class="fa fa-link"></i> <span>Credit Card</span></a></li>
-        </ul>
+        <li ><a id="a_credit_card"><i class="fa fa-credit-card"></i> <span>Credit Card</span></a></li>
+      </ul>
+      </div>
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
@@ -181,22 +185,21 @@ desired effect
    </div>
           
     <div class = "form-group labelfont">
-      <label for = "mail_id" class="col-md-3 col-sm-4 hidden-sm hidden-xs col-xs-4 control-label">credit card</label>
+      <label for = "sel_cre2" class="col-md-3 col-sm-4 hidden-sm hidden-xs col-xs-4 control-label">credit card</label>
       <div class="col-md-6 col-sm-12 col-xs-12">
          <div class = "input-group">
             <span class="input-group-addon">C</span>
-            <div class = "labelfont" style="margin-top: 10px">
+            <div class = "labelfont">
              <select id = "sel_cre2" class="form-control">
                   <option>select credit</option>
 
-                    </select>
-        
-                
-                    
+              </select>  
          </div>
          </div>
       </div>
    </div>
+
+
 
     <div class = "form-group labelfont" >
       <div style="width: 100%;text-align: center"> 
@@ -260,7 +263,7 @@ desired effect
                     </select>
             </div>
          </div>
-         <div class = "labelfont" style="margin-top: 10px">
+         <div class = "input-group labelfont" style="margin-top: 10px">
              <select id = "sel_cre" class="form-control">
                   <option>select credit</option>
 
@@ -269,7 +272,7 @@ desired effect
                 
                     <span class="input-group-btn" >
                       <button type="button" class="btn btn-info btn-flat" id="plusCreditCard">
-                        <span style="font-size:18px"><i class="fa fa-plus"></i></span>
+                        <span style="font-size:19px"><i class="fa fa-plus"></i></span>
                       </button>
                     </span>
          </div>
